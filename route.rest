@@ -1,0 +1,21 @@
+GET  http://localhost:3000/user
+
+###
+
+GET http://localhost:3000/user/65b1bf0e079f06ef8fc30471
+
+
+###
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "name" : "Juneil", 
+    "dateOfBirth" : "1-25-2024",
+    "address" : "Makilas",
+    "phoneNumber" : "09282371231"
+}
+
+###
+
+DELETE http://localhost:3000/user/65b1bf0e079f06ef8fc30471
