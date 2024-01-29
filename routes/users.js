@@ -35,8 +35,21 @@ router.post('/', async(req, res) => {
 })
 
 //Updating one
-router.patch('/:id', getUser, (req, res) => {
-   
+router.patch('/:id', getUser, async(req, res) => {
+    if (req.body.name != null) {
+        res.user.name = req.body.name
+    }
+    if (req.body.dateOfBirth != null) {
+        res.user.dateOfBirth = req.body.dateOfBirth
+    }
+    if (req.body.address != null) {
+        res.user.address = req.body.address
+    }
+    try {
+        const updateUser = await res.user.save()
+    } catch (error) {
+        res.status(400).json({message: error.message})
+    }
 })
 
 //Delete one 

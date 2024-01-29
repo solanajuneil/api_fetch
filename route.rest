@@ -18,4 +18,16 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/user/65b1bf0e079f06ef8fc30471
+DELETE http://localhost:3000/user/65b1c7879d14ef1212ec0870
+
+
+###
+PATCH  http://localhost:3000/user/65b1bf0e079f06ef8fc30471
+
+Content-Type: application/json
+
+{
+    "name" : "Juneil Solana", 
+    "dateOfBirth" : "2-20-2024",
+    "addresss" : "IpiL"
+}
